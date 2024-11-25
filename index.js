@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // database connection function
-dbConnect();
+// dbConnect();
 // تسجيل الدخول عند بدء تشغيل الخادم
 (async () => {
   try {
