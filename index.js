@@ -18,19 +18,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // database connection function
 // dbConnect();
 // تسجيل الدخول عند بدء تشغيل الخادم
-// (async () => {
-//   try {
-//     await login();
-//   } catch (error) {
-//     console.error('فشل في تسجيل الدخول عند بدء التشغيل:', error);
-//   }
-// })();
-// app.use(session({
-//   secret: 'SECRET_SESSION',
-//   resave: false,
-//   saveUninitialized: true,
-//   cookie: { secure: false } // استخدم true إذا كنت تستخدم HTTPS
-// }));
+(async () => {
+  try {
+    await login();
+  } catch (error) {
+    console.error('فشل في تسجيل الدخول عند بدء التشغيل:', error);
+  }
+})();
+app.use(session({
+  secret: 'SECRET_SESSION',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // استخدم true إذا كنت تستخدم HTTPS
+}));
 
 // Routes 
 
